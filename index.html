@@ -14,7 +14,13 @@
 
   <body>
  
+<audio autoplay>
+ 
+  <source src="song.mp3" type="audio/mpeg">
+  <source src="song.mp3" type="audio/mp3">
 
+Your browser does not support the audio element.
+</audio>
     <div class="container">
       <div class="one">
         <h1 class="one">
@@ -127,12 +133,14 @@
       </div>
       <div class="nine">
         <p>Love youu</p>
-        <p class="last-smile">:)</p>
-         <script>
-        // Mengarahkan pengguna ke halaman love.html setelah 5 detik
-        setTimeout(function() {
+     <button id="loveButton">Click di sini</button>
+
+    <script>
+        // Menambahkan event listener untuk tombol
+        document.getElementById("loveButton").addEventListener("click", function() {
+            // Mengarahkan pengguna ke halaman love.html
             window.location.href = "love.html";
-        }, 2000); // Redirect setelah 5 detik
+        });
     </script>
         
       </div>
