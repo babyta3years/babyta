@@ -14,13 +14,18 @@
 
   <body>
  
-<audio autoplay>
- 
-  <source src="song.mp3" type="audio/mpeg">
-  <source src="song.mp3" type="audio/mp3">
-
-Your browser does not support the audio element.
-</audio>
+<script>
+  var audio = new Audio('song.mp3');
+  var UserInteracted = setInterval(()=>{
+    audio.play()
+    .then(()=>{
+      clearInterval(UserInteracted);
+    })
+    .catch(()=>{
+      console.log("waiting for user interaction to play first notification")
+    });     
+  },1000)
+</script>
     <div class="container">
       <div class="one">
         <h1 class="one">
